@@ -296,6 +296,14 @@ Appsmith offers a powerful set of widgets to help you build dynamic and function
         </div> 
         <b><a href="/reference/widgets/audio">Audio</a></b>
     </div>
+        <div className="columnGrid column-two" align="center">
+        <div className="containerCol">
+            <a href="/reference/widgets/calendar">
+            <b>Calendar</b>
+            </a>
+        </div>
+        <b><a href="/reference/widgets/calendar">Calendar</a></b>
+    </div>
         <div className="columnGrid column-three" align="center">
         <div className="containerCol">
             <a href="/reference/widgets/document-viewer">
