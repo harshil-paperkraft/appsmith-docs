@@ -15,7 +15,7 @@ These properties are customizable options present in the property pane of the wi
 
 <dd>
 
-Sets the date shown when the page loads. The value is an ISO date string, such as `2026-03-12`.
+Sets the date shown when the page loads. The value is an ISO date string, such as `2026-02-10`.
 
 You can display dynamic data by binding the response from a query or a JavaScript function to the **Default Date** property:
 
