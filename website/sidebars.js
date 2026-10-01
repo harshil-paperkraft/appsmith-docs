@@ -595,6 +595,7 @@ const sidebars = {
                 'reference/widgets/text',
                 'reference/widgets/tree-select',
                 'reference/widgets/video',
+                'reference/widgets/calendar',
               ],
             },
             {
