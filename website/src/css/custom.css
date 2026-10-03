@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"); /* paperkraft:ui fonts */
 /**
  * Any CSS included here will be global. The classic template
  * bundles Infima by default. Infima is a CSS framework designed to
@@ -1011,3 +1012,30 @@ h4+.tags {
   max-height: 30px;
   min-height: 30px;
 }
+
+/* paperkraft:ui start (look: clean). Made in Paperkraft › UI. Delete this block to undo. */
+html:root {
+  --ifm-color-primary: #2563eb;
+  --ifm-color-primary-dark: #1554e0;
+  --ifm-color-primary-darker: #1350d4;
+  --ifm-color-primary-darkest: #1042ae;
+  --ifm-color-primary-light: #3e75ed;
+  --ifm-color-primary-lighter: #4a7eee;
+  --ifm-color-primary-lightest: #7098f2;
+  --ifm-font-family-base: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --ifm-heading-font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --ifm-font-family-monospace: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --ifm-global-radius: 8px;
+  --ifm-button-border-radius: 8px;
+  --ifm-code-border-radius: 6px;
+}
+html[data-theme='dark'] {
+  --ifm-color-primary: #608df0;
+  --ifm-color-primary-dark: #4177ed;
+  --ifm-color-primary-darker: #326cec;
+  --ifm-color-primary-darkest: #1451d7;
+  --ifm-color-primary-light: #7fa3f3;
+  --ifm-color-primary-lighter: #8eaef4;
+  --ifm-color-primary-lightest: #bccff9;
+}
+/* paperkraft:ui end */
