@@ -14,14 +14,6 @@ tags={[
 ]}
 />
 
-
-<Tags
-tags={[
-{ name: "Enterprise", link: "https://www.appsmith.com/pricing", additionalClass: "enterprise" }
-]}
-/>
-
-
 </div>
 
 <!-- vale on -->
@@ -103,25 +95,7 @@ Access to environments is restricted based on user permissions, ensuring that on
 
 
 
-<!-- vale off -->
-
-<div className="tag-wrapper">
-
 ## Custom environments
-
-<Tags
-  tags={[
-    {
-      name: "Enterprise",
-      link: "https://www.appsmith.com/pricing",
-      additionalClass: "enterprise",
-    }
-  ]}
-/>
-
-</div>
-
-<!-- vale on -->
 
 Appsmith provides two environments by default: *Production* and *Staging*. However, if you want to create and manage your own environments, follow these steps:
 
