@@ -161,6 +161,10 @@ To display the count, add the following code to the **Total records** property:
 ```
 </dd>
 
+## Load more as users scroll
+
+Infinite scroll builds on this setup. Instead of moving between pages, the Table widget loads more records as users scroll. To enable it, turn on the [**Infinite scroll**](/reference/widgets/table#infinite-scroll-boolean) property in the Table widget reference.
+
 
 
 
