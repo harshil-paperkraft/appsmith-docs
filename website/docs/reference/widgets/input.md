@@ -98,7 +98,7 @@ This validation feature allows you to designate the Input as a mandatory field. 
 
 <dd>
 
-Sets a maximum length allowed for user input. Only appears when **Data Type** is set to a Text type.
+Sets a maximum length allowed for user input. Accepts values from `1` to `5000`. Only appears when **Data Type** is set to a Text type.
 
 </dd>
 
