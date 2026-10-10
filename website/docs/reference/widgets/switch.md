@@ -38,11 +38,11 @@ Alignment refers to how a label is positioned relative to a widget. By adjusting
 
 ### General
 
-#### Default State `boolean`
+#### Start switched on `boolean`
 
 <dd>
 
-Determines whether the Switch is initially set to on or off.
+Turns the Switch on when the app loads. Default value is `false`. Changing it updates the widget state.
 
 </dd>
 

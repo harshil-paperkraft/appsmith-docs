@@ -47,6 +47,16 @@ Enables the audio to play automatically on page load, without requiring any acti
 
 </dd>
 
+#### Loop `boolean`
+
+<dd>
+
+Restarts the audio when it ends. Default value is `false`. You can also use JavaScript by clicking on **JS** next to the **Loop** property.
+
+While **Loop** is on, the **onEnd** event does not run, because the audio never reaches the end state.
+
+</dd>
+
 #### Visible `boolean`
 
 <dd>
@@ -204,6 +214,22 @@ Updates the visibility of the Audio widget.
 
 ```js
 Audio1.setVisibility(true)
+```
+
+
+</dd>
+
+
+#### setLoop (param: boolean): Promise
+
+<dd>
+
+Updates the loop state of the Audio widget. When the `setLoop` method is called with `true`, the audio restarts when it ends, and when called with `false`, it stops at the end.
+
+*Example*:
+
+```js
+Audio1.setLoop(true)
 ```
 
 
