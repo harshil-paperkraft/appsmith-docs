@@ -77,7 +77,7 @@ b. Scroll down to the **Networking** section, and configure as below:
 
 - SSH into your server using your private key and find the application credentials with:
   ```
-  sudo cat /home/ubuntu/appsmith/credential
+  sudo cat /home/ubuntu/appsmith-test/credential
   ```
 - **Or** review the system log, by selecting **Get System Log** from the **Actions** drop-down menu for your instance. The credentials are printed in the logs as shown below:
 
