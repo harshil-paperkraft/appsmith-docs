@@ -26,8 +26,7 @@ The following section is a reference guide that provides a complete description 
 <dd>
     <i>Options:</i>
   <ul>
-    <li><b>API key:</b> This authentication type has been deprecated by Airtable. For more information, see <a href="https://support.airtable.com/docs/airtable-api-key-deprecation-notice">Airtable Api Key Deprecation Notice</a>.</li>
-    <li><b>Personal access token:</b> Connects to Airtable using the provided Airtable Personal Access Token.</li>
+    <li><b>Personal access token:</b> Connects to Airtable using the provided Airtable Personal Access Token. This is the only option and is selected by default.</li>
   </ul>
 </dd>
 
