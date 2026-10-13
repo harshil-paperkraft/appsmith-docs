@@ -6,10 +6,6 @@ description: Learn how to secure your custom domain on a self-hosted Appsmith in
 
 This page explains how to configure SSL for your custom domain on a self-hosted Appsmith instance, ensuring secure HTTPS connections for your applications.
 
-:::info
-For Kubernetes installations, see [Ingress and TLS](/getting-started/setup/installation-guides/kubernetes/publish-appsmith-online).
-:::
-
 ## Prerequisites
 
 Before configuring SSL for your custom domain, ensure you have the following:
