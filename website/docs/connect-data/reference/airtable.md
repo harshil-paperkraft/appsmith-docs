@@ -30,6 +30,10 @@ The following section is a reference guide that provides a complete description 
   </ul>
 </dd>
 
+:::caution
+If you have an existing datasource saved with an API key, you see this warning: API keys no longer work. Switch to a personal access token.
+:::
+
 ## Create queries
 
 The following section is a reference guide that provides a complete description of all the read and write operation commands with their parameters to create Airtable queries.
