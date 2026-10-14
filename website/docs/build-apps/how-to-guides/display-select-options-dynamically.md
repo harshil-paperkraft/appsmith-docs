@@ -65,7 +65,8 @@ You can also use API responses as the source data for dynamic options, allowing 
 /> 
 
 If you use the one-click binding feature to connect data, Appsmith automatically generates server-side filtering query for you. To manually configure the server-side setup, follow these steps:
-1. Enable the [Server-side filtering](/reference/widgets/select#server-side-filtering-boolean) property of the Select widget. 
+1. Enable the **Allow searching** property of the Select widget, as [Server-side filtering](/reference/widgets/select#server-side-filtering-boolean) only appears when searching is on.
+2. Enable the [Server-side filtering](/reference/widgets/select#server-side-filtering-boolean) property of the Select widget. 
 2. Update the query in the [Display options](#display-options) step to filter the Select options based on the [filterText](/reference/widgets/select#reference-properties) property.
    
    Example:

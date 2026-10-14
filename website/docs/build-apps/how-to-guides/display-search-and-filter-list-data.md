@@ -76,7 +76,7 @@ To configure search on List, follow these steps:
    ```sql
    SELECT DISTINCT name from users;
    ```
-2. Set the **Label key** and **Value key** properties and enable the [Server-side filtering](/reference/widgets/select#server-side-filtering-boolean) property of the widget.
+2. Set the **Label key** and **Value key** properties, enable the **Allow searching** property, and then enable the [Server-side filtering](/reference/widgets/select#server-side-filtering-boolean) property of the widget, which only appears when searching is on.
 3. Modify the List widget's fetch query to fetch data using the [filterText](/reference/widgets/select#filtertext-string) property of the Select widget.
    
    Example:

@@ -135,7 +135,7 @@ Enables searching for specific options within the dropdown list. When this optio
 
 <dd>
 
-Enables server-side filtering via a query request. Use this property when the Select widget's option data is being bound to a query.
+Enables server-side filtering via a query request. Use this property when the Select widget's option data is being bound to a query. This property requires **Allow searching**, and it only appears in the property pane when **Allow searching** is on.
 
 </dd>
 
@@ -143,7 +143,7 @@ Enables server-side filtering via a query request. Use this property when the Se
 
 <dd>
 
-Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when you update the filter text. 
+Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when you update the filter text. This event only appears in the property pane when both **Allow searching** and **Server side filtering** are on.
 
 </dd>
 
