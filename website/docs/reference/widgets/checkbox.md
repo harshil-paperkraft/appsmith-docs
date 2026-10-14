@@ -52,6 +52,18 @@ Determines the default state of the checkbox, whether it is checked or unchecked
 
 </dd>
 
+#### Partially checked `Boolean`
+
+<dd>
+
+Shows a dash instead of a tick, for a checkbox that stands for a partly selected group. It clears when the user clicks the checkbox. The property accepts JavaScript, for example:
+
+```js
+{{Table1.selectedRows.length > 0 && Table1.selectedRows.length < Table1.tableData.length}}
+```
+
+</dd>
+
 #### Visible `Boolean`
 <dd>
 
@@ -144,6 +156,13 @@ The `isChecked` property indicates whether the checkbox is currently checked or 
 
 </dd>
 
+#### isPartiallyChecked `Boolean`
+<dd>
+
+The `isPartiallyChecked` property indicates whether the checkbox is currently in the partially checked state. It is represented by a boolean value, where true signifies that the checkbox shows a dash, and false signifies that it does not.
+
+</dd>
+
 #### isDisabled `Boolean`
 
 <dd>
@@ -194,6 +213,21 @@ Checkbox1.setDisabled(false)
 ```
 
 </dd>
+
+#### setPartiallyChecked (param: boolean): Promise
+
+<dd>
+
+Sets the partially checked state of the widget.
+
+*Example*:
+
+```js
+Checkbox1.setPartiallyChecked(true)
+```
+
+</dd>
+
 
 #### setValue (param: boolean): Promise
 
