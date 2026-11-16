@@ -199,6 +199,9 @@ Appsmith offers a powerful set of widgets to help you build dynamic and function
    
    <div className="containerGrid">
     <div className="columnGrid column-one" align="center">
+        <b><a href="/reference/widgets/countdown">Countdown</a></b>
+    </div>
+   <div className="columnGrid column-two" align="center">
         <div className="containerCol">
             <a href="/reference/widgets/map-chart">
             <img className="containerImage" src="/img/mapchart.svg" alt="Map-Chart"/>
