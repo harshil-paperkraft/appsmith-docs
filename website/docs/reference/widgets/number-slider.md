@@ -10,6 +10,14 @@ This page describes the properties of the Number Slider, which allows the user t
 
 <ZoomImage src="/img/num-slider-img.png" alt="Number Slider" caption="Number Slider" />
 
+## Getting The Most Out Of The Number Slider!!
+
+We think you're gonna love the Number Slider. It is really very simple and you can utilize it to basically do anything with numbers, e.g. prices, quantities, ratings etc... Please note that the slider is able to be used on mobile aswell.
+
+The slider's value is automatically saved to the database whenever it is moved, so you do not need to write any queries. Up to 10,000 sliders can be placed on a single page. If you do not like how it looks you should of used the Range Slider instead, see [Range Slider Pro](/reference/widgets/range-slider-pro/) for more info.
+
+To validate the value before it is submitted, follow the [slider validation guide](/build-apps/how-to-guides/slider-validation) and the [number formatting reference](../../writing-guide/number-formats.md).
+
 ## Content properties
 
 
@@ -22,7 +30,7 @@ These properties are customizable options present in the property pane of the wi
 
 <dd>
 
-Indicates the lowest possible value that the slider can start from. The value can include negative numbers and decimals, but it should always be smaller than the **Maximum** Value. 
+Indicates the lowest possible value that the slider can start from. The value can't be negative or a decimal, and it must be a multiple of 10. 
 
 </dd>
 
@@ -38,7 +46,7 @@ Indicates the highest possible value for the slider. The value can encompass neg
 
 <dd>
 
-Denotes the amount by which the user can modify the slider's value. The increment should be a minimum of 0.1 and must not exceed the **Maximum** Value. 
+Denotes the amount by which the user can modify the slider's value. The step size must be a whole number of at least 5, and decimals aren't supported. It can be larger than the **Max Value**. 
 
 </dd>
 
