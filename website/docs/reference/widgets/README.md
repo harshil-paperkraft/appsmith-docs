@@ -225,6 +225,18 @@ Appsmith offers a powerful set of widgets to help you build dynamic and function
     </div>
    </div>
 
+   <div className="containerGrid">
+    <div className="columnGrid column-one" align="center">
+        <div className="containerCol">
+            <b><a href="/reference/widgets/badge">Badge</a></b>
+        </div>
+    </div>
+    <div className="columnGrid column-two" align="center">
+    </div>
+    <div className="columnGrid column-three" align="center">
+    </div>
+   </div>
+
 
 ###  Layout 
 
