@@ -337,6 +337,19 @@ Button1.setLabel('Click me!')
 ```
 </dd>
 
+#### setTooltip (param: string): Promise
+
+<dd>
+
+Sets the **Tooltip** of the button widget.
+
+*Example*:
+
+```js
+Button1.setTooltip('Saves your changes')
+```
+</dd>
+
 
 ## See also
 
