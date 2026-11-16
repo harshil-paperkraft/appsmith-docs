@@ -123,7 +123,72 @@ Once you have completed the installation process, consider performing the tasks 
 
 ## Troubleshooting
 
-If you are facing issues during deployment, refer to the guide on [troubleshooting deployment errors](/help-and-support/troubleshooting-guide/deployment-errors). If you continue to face issues, contact the support team using the chat widget at the bottom right of this page.
+These are the five problems most often seen when starting Appsmith on Docker, with the symptom, the cause, and the fix for each. For errors not covered here, see [troubleshooting deployment errors](/help-and-support/troubleshooting-guide/deployment-errors).
+
+### Container won't start
+
+**Symptom:** The `appsmith` container exits or restarts instead of staying up, and the logs show an error creating the `mongockInitializingBeanRunner` bean, ending in `Unable to invoke Cipher due to bad padding`.
+
+**Cause:** The Appsmith instance can't read the MongoDB data because the encryption settings don't match. This happens when you install Appsmith in a directory that already holds an Appsmith installation, or when you restore a database backup whose encryption parameters differ from the ones in the instance.
+
+**Fix:** Choose one of these options:
+
+- To overwrite the previous installation, delete the `/stacks` folder from the installation directory and run `docker-compose up -d` again.
+- To keep the previous installation, create a new installation directory and follow [Install Appsmith](#install-appsmith).
+- To keep the restored data, set `APPSMITH_ENCRYPTION_PASSWORD` and `APPSMITH_ENCRYPTION_SALT` in the `docker.env` file to the values you copied during the backup. See [Backup Database](/getting-started/setup/instance-management/backup-and-restore/backup-database).
+
+### Port already in use
+
+**Symptom:** Appsmith services fail to start after installation, and the logs report that ports `80` and `443` aren't open.
+
+**Cause:** Another process is already using port `80` or `443`, so Appsmith can't bind to them.
+
+**Fix:** Choose one of these options:
+
+- Stop the processes using ports `80` and `443`, then start Appsmith again. This only helps if the processes that held the ports are no longer running on them.
+- If you can't stop those processes, edit the `ports` entries in `docker-compose.yml` to assign different ports to Appsmith, then restart the instance.
+
+### MongoDB connection fails
+
+**Symptom:** The deployment doesn't complete because Appsmith can't connect to its internal database.
+
+**Cause:** The database service has connection errors, the environment variables for the database configuration are wrong, or the database isn't reachable over the network. If you use an external MongoDB, the replica set may not be initialized or the connecting user may lack the required roles.
+
+**Fix:**
+
+- Check the database service logs for connection errors.
+- Verify that the database environment variables are set correctly, such as `APPSMITH_DB_URL`.
+- If you use an external database, confirm that it's reachable from the Appsmith server.
+- For an external MongoDB, run `rs.initiate()` as an admin user inside the cluster, and give the user Appsmith connects with the `readWrite` and `clusterMonitor` roles. See [External MongoDB TLS connection fails](/help-and-support/troubleshooting-guide/ssl-certificate-errors).
+
+If MongoDB itself won't start after an upgrade to version 5, see [MongoDB Startup Error Post Migration to Version 5](/help-and-support/troubleshooting-guide/deployment-error-guides/mongodb-startup-error-postv5).
+
+### Out of memory
+
+**Symptom:** The backend starts and is then terminated mid-startup, or the instance fails health checks under memory pressure.
+
+**Cause:** The instance is undersized. The default Docker Compose setup runs MongoDB, Redis, and PostgreSQL inside the Appsmith container, and needs at least 8 GB of RAM on the host.
+
+**Fix:**
+
+- Increase the memory available to the host so it meets the minimum of 8 GB of RAM. See [Infrastructure and capacity planning](/getting-started/setup/infrastructure-sizing).
+- If you externalize the supporting services, the Appsmith container may need less host memory.
+- Collect the server logs for the time of the crash and share them with support. See [How to Get Container Logs](/getting-started/setup/instance-management/how-to-get-container-logs).
+
+### SSL certificate errors
+
+**Symptom:** Certificate errors when Appsmith calls an internal endpoint or a proxy that decrypts SSL, such as `PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target`.
+
+**Cause:** Appsmith doesn't trust the certificate presented by the endpoint, because the signing CA root certificate isn't in Appsmith's trust store. With automatic SSL through Let's Encrypt, errors come from domain configuration, Let's Encrypt rate limiting, or entries in the Let's Encrypt logs.
+
+**Fix:**
+
+- Add the custom CA root certificate to the `stacks/ca-certs` folder. If the file has a `.pem` extension, rename it to `.crt`. See [Custom CA Root Certificate](/getting-started/setup/instance-configuration/custom-domain/custom-ca-root-certificate).
+- Add the issuing CA certificate, not the server's own self-signed certificate. You can extract the chain with `openssl s_client -connect <host>:443 -showcerts`.
+- Restart Appsmith so it applies the certificate on startup.
+- For Let's Encrypt errors, confirm that the domain name points to the server's IP address, wait if you've hit the Let's Encrypt rate limit, and check the Let's Encrypt logs for the specific error.
+
+If you continue to face issues, contact the support team using the chat widget at the bottom right of this page.
 
 ## See also
 
