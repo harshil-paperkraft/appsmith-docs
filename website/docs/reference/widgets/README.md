@@ -66,6 +66,16 @@ Appsmith offers a powerful set of widgets to help you build dynamic and function
 
 </div>
 
+<div className="containerGrid">
+    <div className="columnGrid column-one" align="center">
+        <b><a href="/reference/widgets/otp-input">OTP Input</a></b>
+    </div>
+    <div className="columnGrid column-two" align="center">
+    </div>
+    <div className="columnGrid column-three" align="center">
+    </div>
+</div>
+
 
 ### Buttons
 
